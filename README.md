@@ -7,7 +7,7 @@ Serenity strongly encourages good test automation design, and supports several d
 The latest version of Serenity supports Cucumber 5.5.
 
 ## The starter project
-The best place to start with Serenity and Cucumber is to clone or download the starter project on Github ([https://github.com/serenity-bdd/serenity-cucumber-starter](https://github.com/serenity-bdd/serenity-cucumber-starter)). This project gives you a basic project setup, along with some sample tests and supporting classes. There are two versions to choose from. The master branch uses a more classic approach, using action classes and lightweight page objects, whereas the **[screenplay](https://github.com/serenity-bdd/serenity-cucumber-starter/tree/screenplay)** branch shows the same sample test implemented using Screenplay.
+
 
 ### The project directory structure
 The project has build scripts for both Maven and Gradle, and follows the standard directory structure used in most Serenity projects:
@@ -24,12 +24,17 @@ src
 
 Serenity 2.2.13 introduced integration with WebdriverManager to download webdriver binaries.
 
-## The sample scenario
-Both variations of the sample project uses the sample Cucumber scenario. In this scenario, Sergey (who likes to search for stuff) is performing a search on the internet:
+## The sample scenario and runner
+We have covered both positive and negative scenario in the system. WE have all scenario inside in the- Post_Product.feature file.
 
-## In order to run the serenity BDD file 
+We can run the test using TestRunner files where we have defined the tag "@searchProduct". It can run it by doing right click on this. 
+Also, we can run the test using "mvn clean verify" command. it will the TestRunner file and run the test case which is defined inside it. 
 
-Need to write the command mvn clean verify and result will display undre the folder location: 
+
+
+## In order to run the serenity report file 
+
+Need to write the command "mvn clean verify" and result will display undre the folder location: 
 
 --- Target 
   --Serenity
@@ -37,5 +42,5 @@ Need to write the command mvn clean verify and result will display undre the fol
      -Site
       -index.html
 
-We have covered both positvie and negative scenarios.
+**NOTE: We have covered both positvie and negative scenarios.**
 
