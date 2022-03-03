@@ -12,6 +12,8 @@ Feature: Search for the product with positive and Negative Scenario
     |fruit|
     |apple|
     |mango|
+    |tofu|
+    |water|
 
 
   Scenario Outline: Negative Scenario
@@ -22,4 +24,5 @@ Feature: Search for the product with positive and Negative Scenario
       |apples|
       |Mongore|
       |Wrong Value|
+      |tofus|
 

@@ -2,14 +2,11 @@ package starter.apis;
 
 import io.restassured.response.Response;
 import jxl.common.Assert;
-import org.jsoup.Connection;
 
-import static net.serenitybdd.rest.SerenityRest.then;
-import static org.hamcrest.Matchers.contains;
 
 
 /*
-This class is used for the get the respocne and validate the status code and values
+This class is used for the get the response and validate the status code and values
  */
 public class FruitResponse {
 

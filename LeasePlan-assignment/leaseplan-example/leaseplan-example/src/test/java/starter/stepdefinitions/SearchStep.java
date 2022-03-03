@@ -1,17 +1,13 @@
 package starter.stepdefinitions;
 
-import groovy.transform.Undefined;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-import net.serenitybdd.rest.SerenityRest;
-import net.thucydides.core.annotations.Steps;
-import org.jruby.RubyProcess;
-import org.jsoup.Connection;
 import starter.apis.FruitClass;
 import starter.apis.FruitResponse;
 import static net.serenitybdd.rest.SerenityRest.*;
-import static org.hamcrest.Matchers.contains;
+
 
 
 /*

@@ -2,8 +2,7 @@ package starter.apis;
 
 
 import java.net.MalformedURLException;
-import java.net.URL;
-import static java.lang.String.format;
+
 
 /*
 This class use to define the baseURL and find String method.

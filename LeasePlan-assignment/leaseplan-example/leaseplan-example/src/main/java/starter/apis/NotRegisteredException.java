@@ -2,7 +2,7 @@ package starter.apis;
 
 
 /*
-This call can be use to define the custom Exception in Responce.
+This call can be use define the custom Exception in Response.
  */
 public class NotRegisteredException extends RuntimeException {
     public NotRegisteredException(String message) {
