@@ -10,45 +10,34 @@ import org.jruby.RubyProcess;
 import org.jsoup.Connection;
 import starter.apis.FruitClass;
 import starter.apis.FruitResponse;
-
-
 import static net.serenitybdd.rest.SerenityRest.*;
 import static org.hamcrest.Matchers.contains;
 
+
+/*
+This class will be use to get the response and validate it
+ */
+
 public class SearchStep {
 
-    @Steps
-    public CarsAPISteps carsAPI;
-
-    Response res;
+    Response resposeObject;
 
     @When("he calls endpoint (.*) and verify result$")
-    public void heCallsEndpoint(String arg0) throws Exception {
-        System.out.println(arg0);
-        res= given().when().get(FruitClass.placeRequest(arg0));
+    public void heCallsEndpoint(String endPoint) throws Exception {
+        System.out.println(endPoint);
+        resposeObject= given().when().get(FruitClass.placeRequest(endPoint));
     }
 
     @Then("he sees the results displayed for (.*)$")
-    public void heSeesTheResultsDisplayedForApple(String arg0) throws Exception{
+    public void heSeesTheResultsDisplayedForApple(String FruitName) throws Exception{
         FruitResponse.withContent(then().extract().asString()).shouldBeValid();
-        FruitResponse.validateResponce(res,arg0);
+        FruitResponse.validateResponce(resposeObject,FruitName);
     }
 
     @Then("he sees the results displayed not for (.*)$")
-    public void heSeesTheResultsDisplayedNotForApple(String arg0) throws Exception{
+    public void heSeesTheResultsDisplayedNotForApple(String FruitName) throws Exception{
         FruitResponse.withContent(then().extract().asString()).shouldBeValid();
-        FruitResponse.validateNegativeResponse(res,arg0);
+        FruitResponse.validateNegativeResponse(resposeObject,FruitName);
     }
-
-//    @Then("he sees the results displayed for mango")
-//    public void heSeesTheResultsDisplayedForMango() {
-//        restAssuredThat(response -> response.body("title", contains("mango")));
-//    }
-//
-//    @Then("he does not see the results")
-//    public void he_Doesn_Not_See_The_Results() {
-//        restAssuredThat(response -> response.body("error", contains("True")));
-//    }
-
 
 }
