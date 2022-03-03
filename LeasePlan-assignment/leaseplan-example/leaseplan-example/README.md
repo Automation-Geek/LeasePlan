@@ -37,5 +37,5 @@ Need to write the command mvn clean verify and result will display undre the fol
      -Site
       -index.html
 
-We have covered both positvie and negative scenario 
+We have covered both positvie and negative scenarios.
 
